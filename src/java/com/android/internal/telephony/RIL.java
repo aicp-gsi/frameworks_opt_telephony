@@ -5604,8 +5604,9 @@ public class RIL extends BaseCommands implements CommandsInterface {
 
     public boolean needsOldRilFeature(String feature) {
         return mOldRilFeatures.contains(feature);
- 
-   void setCallIndication(int callId, int seqNo) {
+    }
+        
+    void setCallIndication(int callId, int seqNo) {
         // Ensure that mMtkRadioProxy is updated.
         IRadio radioProxy = getRadioProxy(null);
         if (mMtkRadioProxy != null) {
